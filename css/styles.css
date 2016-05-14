@@ -1,0 +1,8 @@
+#search-form {
+background-color: #ffad33;
+overflow: auto;
+width: 300px;
+height: 350px;
+padding-left: 20px;
+border: 3px solid #ffad33;
+}
