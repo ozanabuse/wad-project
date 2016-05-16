@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<img src="images/bg.jpg" id="bg" alt="">
 	</head>
 <body onload="initMap()">
 
@@ -81,20 +82,16 @@
 
 <div class="container">
 
-<p> Google maps, pictures with some cities</p>
-
-</div>
+<p id="para"><strong>CHECK OUT Top 5 Vacation Spots in Romania !! </strong></p>
 
 <div id="map"></div>
   
-  <script>
-  
 
   
   
+  <script>
   
-    
-	
+  
 	function initialize() {
 	
 	var landmark1=new google.maps.LatLng(45.503104,25.574562);//Hotel Dragului, Predeal
@@ -112,9 +109,10 @@
     var mapDiv = document.getElementById('map');
 	
     var map = new google.maps.Map(mapDiv, {
-      center: {lat: 45.943161, lng: 21.104736},
-      zoom: 8
+      center: {lat: 45.943161, lng: 24.9494},
+      zoom: 6
     },mapProp);
+	
 	
 	
 	var marker1 = new google.maps.Marker({
@@ -152,26 +150,28 @@
 	marker5.setMap(map);
 	
 	
-	var contentString = 'BEST place in the WORLD !'
-   var infowindow1 = new google.maps.InfoWindow({
-        content: contentString
+	
+	
+	var infowindow1 = new google.maps.InfoWindow({
+        content: "Hotel Dragului is situated in Predeal and 500 meters from Clabucet Ski Slope, surrounded by the Bucegi and Piatra Mare Mountains."
     });
   
 	 var infowindow2 = new google.maps.InfoWindow({
-        content: contentString
+        content: "Hotel Carol is waiting in the center of Vatra Dornei, only 150 meters from the ski slopes, in a unique picture! Austro-Hungarian-architecture hotel, combines the comfort of modern technology with a vintage style."
     });
 	 var infowindow3 = new google.maps.InfoWindow({
-        content: contentString
+        content: "The five-star Hotel Vega, open for business 365 days a year, is the ideal accommodation in Constanta, whether for your business trip or for a stay in Mamaia during the summer season."
     });
 	 var infowindow4 = new google.maps.InfoWindow({
-        content: contentString
+        content: "With its main location, Hotel Le Provence is within a short distance of most treveller sights and work addresses in Bran."
     });
 	 var infowindow5 = new google.maps.InfoWindow({
-        content: contentString
+        content: "Hotel Ferdinand is located in the heart of the Hateg city, in a historic building, which came to life due to its selected customers."
     });
  
     google.maps.event.addListener(marker1, 'click', function() {
       infowindow1.open(map,marker1);
+	  
     });
 	
 	google.maps.event.addListener(marker2, 'click', function() {
@@ -197,7 +197,8 @@
   
 
   </script>
-
+ 
+</div>
 
 </body>
 </html>
